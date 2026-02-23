@@ -1,0 +1,72 @@
+@font-face {
+    font-family: LEMON;
+    src: url(../font/LEMON.otf);
+}
+
+body{
+    background-image: url(../img/fondo.avif);
+    color: white;
+}
+
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 6px;
+    grid-template-areas:
+    "header"
+    "navbar"
+    "article"
+    "aside"
+    "footer"
+    ;
+
+}
+
+@media (min-width:768px){
+    .contenedor{
+    display: grid;
+    gap: 6px;
+    grid-template: 
+        "header header"
+        "navbar navbar" 
+        "aside article" 
+        "footer footer" 
+    ;
+    grid-template-columns: 290px auto;
+    }
+}
+
+@media (min-width:1024px){
+    .contenedor{
+    display: grid;
+    gap: 6px;
+    grid-template: 
+        "header " 
+        "aside article" 
+        "footer footer" 
+    ;
+    grid-template-columns: 290px auto;
+    }
+}
+
+.caja{
+    box-shadow: 10px 6px 37px -13px ;
+    display: grid;
+    place-content: center;
+    text-shadow: 1px 1px grey;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+    border: solid;
+}
+
+.header{
+    font-family: LEMON;
+    text-decoration: color(srgb red rgb(161, 197, 161) rgb(104, 104, 131));
+    color: aqua;
+    grid-area: header;
+ 
+}
+
